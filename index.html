@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резервисање биоскопске карте</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="movie-container">
+        <label>Изаберите филм</label>
+        <select id="izborFilma">                  <!--Select koristim kada zelim da biram izmedju vise opcija-->
+            <option value="200">Ратови звезда: Фантомска напаст (200 rsd)</option>      <!--value mi je cena filma-->
+            <option value="250">Џокер (250 rsd)</option>
+            <option value="200">Небо над Берлином (200 rsd)</option>
+            <option value="300">Господар прстенова: Повратак краља (300 rsd)</option>
+        </select>
+    </div>
+
+    <ul class ="legenda">       <!--Ovo ovde mi je legenda za popunjenost sedista. Napravljeno je kao lista-->
+        <li>
+            <div class="sediste prazno"></div>
+            <small>Слободно</small>
+        </li>
+        <li>
+            <div class="sediste izabrano"></div>
+            <small>Изабрано</small>
+        </li>
+        <li>
+            <div class="sediste zauzeto"></div>
+            <small>Заузето</small>
+        </li>
+    </ul>
+
+    <div class="container">
+        <div class="screen"></div>
+
+        <div class="red">
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+        </div>
+        <div class="red">
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+        </div>
+        <div class="red">
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+            <div class="sediste zauzeto"></div>
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+            <div class="sediste zauzeto"></div>
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+        </div>
+        <div class="red">
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+        </div>
+        <div class="red">
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+            <div class="sediste zauzeto"></div>
+            <div class="sediste zauzeto"></div>
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+        </div>
+        <div class="red">
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+            <div class="sediste"></div>
+            <div class="sediste zauzeto"></div>
+            <div class="sediste zauzeto"></div>
+            <div class="sediste zauzeto"></div>
+            <div class="sediste"></div>
+        </div>
+    </div>
+
+    <p class="text">Изабрали сте <span id="broj">0</span> седишта. Цена је <span id="ukupnaCena">0</span> динара.</p>
+
+    <script src="script.js"></script>
+</body>
+</html>

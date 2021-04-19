@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #242333;
+    color:#fff;
+    display: flex;      /*najlaksi nacin da se nesto poravna horizontalno i vertikalno.*/
+    flex-direction: column;     /*Po defaultu je row, posto meni treba poravnanje odozgo na dole, prebacujem na column.*/
+    align-items: center;
+    justify-content: center;
+    height: 100vh;              /*ovaj i ova dva prethodna reda pravim da bih sve poravnao tacno na sredini.*/
+    font-family: lato;
+    margin: 0; 
+}
+
+.container {                    
+    perspective: 1000px;        /*Celom ovom kontejneru sam promenio perspektivu. Da izgleda kao da sedista gledaju u ekran.*/
+    margin-bottom: 30px;
+}
+    
+
+.movie-container{
+    margin: 20px 0;
+}
+
+.movie-container select {
+    background-color: #fff;
+    border: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 5px 15px 5px 15px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.sediste {
+    background-color: #444451;
+    height: 20px;
+    width:15px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.sediste.zauzeto {
+    background-color: #fff;
+}
+
+.sediste.izabrano {
+    background-color: #6feaf6;
+}
+
+.sediste:nth-of-type(3){        /*Pseudo selector. Biram 3 po redu. Dole ispod sedmi.*/
+    margin-left: 18px;
+}
+.sediste:nth-of-type(7){
+    margin-left: 18px;
+}
+
+.red {
+    display: flex;
+}
+
+.sediste:not(.zauzeto):hover{     /*Zove se pseudo selector. Biram klasu sediste, koja nema i klasu zauzeto. Hover je kada prelazim misom preko njega.*/
+    cursor: pointer;
+    transform: scale(1.2);        /*Kada predjem misom preko, postace vece sediste za 20%.*/
+}
+
+.legenda .sediste:not(.zauzeto):hover{              /*Mora da postoji razmak posle legende. Iz nekog razloga ne radi kada tacka stoji odmah posle legende???*/
+    cursor: default;
+    transform: scale(1);   
+}
+
+.legenda {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color:#777;
+    list-style-type: none;              /*Uklanjam tacke ispred naziva. Po defaultu su bile tu zato sto je ovo lista.*/
+    display: flex;
+    justify-content: space-between;     /*Poravnanje po prostoru izmendju njih.*/
+}
+
+.legenda li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.legenda li small {
+    margin-left: 3px;
+}
+
+.screen{                                /*Ovo se ispod pravim ekran kako ce da mi izgleda*/
+    background-color: #fff;
+    height: 70px;
+    width: 100%;
+    margin: 15px 0;
+    transform: rotateX(-45deg);         /*Eksperimentisi sa ovim, vidi sta sve radi. Ovo ovde je istanjilo prikaz screena.*/
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);        /*Pravim mu senku*/
+}
+
+p.text {
+    margin: 5px 0;
+}
+
+p.text span{
+    color: #6feaf6;
+    font-size: medium;
+}
